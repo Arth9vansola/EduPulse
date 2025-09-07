@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EduPulse - Centralized Student Activity Record Platform
 
-## Getting Started
+A comprehensive web application for managing student activities, faculty reviews, and administrative oversight in educational institutions.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Role-Based Access Control
+- **Landing Page**: Role selection (Student | Faculty | Admin)
+- **Dynamic Navigation**: Role-specific menus and features
+- **Secure Authentication**: Local storage-based session management
+
+### 🎓 Student Features
+- **Dashboard**: Quick stats, recent activities, notifications
+- **Activity Management**: Upload certificates, projects, internships, events
+- **Portfolio**: Personal profile, verified activities grouped by type
+- **Analytics**: Progress tracking, skill development, comparative analysis
+- **Profile Management**: Personal information, career objectives, settings
+
+### 👨‍🏫 Faculty Features
+- **Dashboard**: Assigned students overview, pending approvals
+- **Submission Reviews**: Approve/reject student activities with feedback
+- **Analytics**: Student progress tracking, mentorship insights
+- **Report Generation**: NAAC/NIRF compliance reports
+- **Profile Management**: Faculty information and preferences
+
+### 👤 Admin Features
+- **System Dashboard**: User statistics, system health monitoring
+- **User Management**: Add/edit/remove users, role assignments
+- **Analytics**: Institution-wide reports and compliance data
+- **System Settings**: Configuration management
+- **Notifications**: Bulk announcements and targeted messaging
+
+## 🚀 Technology Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS with custom dark theme
+- **UI Components**: Headless UI, Heroicons
+- **Charts**: Recharts (planned), custom chart components
+- **Authentication**: Context-based state management
+- **File Handling**: React Hook Form, file upload components
+
+## 🎨 Design Features
+
+- **Dark Theme**: Complete dark mode interface
+- **Responsive Design**: Mobile-first approach with desktop enhancements
+- **Component-Based**: Reusable UI components
+- **Interactive Elements**: Hover effects, transitions, modals
+- **Accessible**: ARIA compliant, keyboard navigation
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js app router
+│   ├── dashboard/
+│   │   ├── student/       # Student pages
+│   │   ├── faculty/       # Faculty pages
+│   │   └── admin/         # Admin pages
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Landing page
+├── components/
+│   ├── dashboard/         # Dashboard components
+│   ├── layout/           # Layout components
+│   └── ui/               # UI components
+└── contexts/
+    └── UserContext.tsx   # Authentication context
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd smarthub
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Role Selection**: Choose your role on the landing page
+2. **Dashboard Access**: Navigate through role-specific features
+3. **Activity Management**: Students can upload and track activities
+4. **Review Process**: Faculty can approve/reject submissions
+5. **Administrative Control**: Admins manage users and system settings
 
-## Deploy on Vercel
+## 🔐 Authentication Flow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. User selects role on landing page
+2. Role is stored in localStorage
+3. Protected routes check user role
+4. Redirect to appropriate dashboard
+5. Role-specific navigation and features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 Key Components
+
+### Student Dashboard
+- Activity upload form with file attachments
+- Portfolio generation and sharing
+- Progress analytics and comparisons
+- Notification management
+
+### Faculty Dashboard
+- Submission review interface
+- Student progress tracking
+- Report generation tools
+- Mentorship management
+
+### Admin Dashboard
+- User management interface
+- System health monitoring
+- Compliance reporting
+- Configuration settings
+
+## 🎯 Future Enhancements
+
+- [ ] Backend API integration
+- [ ] Real-time notifications
+- [ ] PDF generation for portfolios
+- [ ] Email notification system
+- [ ] Advanced analytics with charts
+- [ ] File storage integration
+- [ ] Search and filtering improvements
+- [ ] Mobile app development
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👥 Team
+
+Developed as a comprehensive student activity management solution for educational institutions.
+
+---
+
+**Note**: This is a frontend-only implementation. For production use, integrate with appropriate backend services, database, and authentication systems.
