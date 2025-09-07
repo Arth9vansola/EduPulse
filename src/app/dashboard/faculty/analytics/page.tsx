@@ -158,18 +158,21 @@ export default function FacultyAnalytics() {
       />
 
       {/* Period Selector */}
-      <div className="flex space-x-4">
-        <select 
-          value={selectedPeriod} 
-          onChange={(e) => setSelectedPeriod(e.target.value)}
-          className="input"
-        >
-          <option value="weekly">Weekly</option>
-          <option value="monthly">Monthly</option>
-          <option value="semester">Semester</option>
-          <option value="yearly">Yearly</option>
-        </select>
-        <button className="btn btn-primary">Export Report</button>
+      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <label className="text-sm font-medium text-gray-300 whitespace-nowrap">Time Period:</label>
+          <select 
+            value={selectedPeriod} 
+            onChange={(e) => setSelectedPeriod(e.target.value)}
+            className="form-select min-w-[140px] bg-gray-800 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500"
+          >
+            <option value="weekly" className="bg-gray-800 text-white">Weekly</option>
+            <option value="monthly" className="bg-gray-800 text-white">Monthly</option>
+            <option value="semester" className="bg-gray-800 text-white">Semester</option>
+            <option value="yearly" className="bg-gray-800 text-white">Yearly</option>
+          </select>
+        </div>
+        <button className="btn btn-primary whitespace-nowrap">Export Report</button>
       </div>
 
       {/* Key Metrics */}
